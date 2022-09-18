@@ -1,0 +1,167 @@
+
+//vars
+
+$breakpoint: (
+    sm : 500px
+);
+
+$colores: (
+    proyecto : gold,
+    imagen: white,
+);
+
+$background: (gold);
+$span: (goldenrod); 
+
+@mixin proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: solid 5px;
+    margin-bottom: 20px;
+    background-color: $background;
+    width: 80%;
+    margin: auto;
+}
+//mixin y map
+@mixin media ($breakpoints) {
+    @media screen and (min-width: map-get($breakpoint, $breakpoints)) {
+        @content;
+    }        
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    background-image: url(https://i.pinimg.com/originals/80/7c/43/807c433a7b36c39956fac8ded66ac835.jpg);
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        color: $span;
+        min-width: 300px;
+        align-items: center;
+        @include media(sm){flex-wrap: nowrap;}
+        in-flex {
+            flex: 1;
+            min-width: 250px;
+            font-size: x-large;
+            gap: 2vh;
+            padding: 5vh;
+            
+            in-flex:first-child {
+                flex: 2;
+                padding: 25px;
+                margin: 20px;
+                margin-bottom: 0px;
+                @include media(sm){flex-wrap: wrap;}
+                in-flex div {
+                    padding: 25px;
+                    background-color: #fff;
+                    margin: 20px;
+                    @include media(sm){flex-wrap: wrap;}
+                    }
+            }
+        }
+    }
+}
+
+
+h1 { 
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    
+    span {
+        color: $span;
+        display: block;
+        font-family: monospace;
+        white-space: nowrap;
+        border-right: 4px solid ;
+        width: 14ch ;
+
+        animation: typing 2s steps(14),
+        blink .5s infinite step-end alternate;
+        overflow: hidden;
+}
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+@keyframes blink {
+    50% {border-color: transparent }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-width: 250px;
+    .inicio {
+        display: flex;
+        justify-items: center;
+        flex-wrap: wrap;
+}
+}
+
+div .carrusel {
+    min-width: 250px;
+    max-width: 800px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: $background;
+    width: 100%;
+    pie-pagina{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $background;
+        grupo-1 {
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            grupo-2{
+                    flex-direction: column;
+                        box {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+}
+
+.home {
+    border: solid;
+    background-color: gold;
+    color: black;
+    text-decoration: double;
+}
+
+
+
+.proyectos {
+   @include proyectos
+}
+
+.auto__1 {
+    @extend .proyectos;
+}
+
+.auto__2{
+    @extend .proyectos;
+}
+
+

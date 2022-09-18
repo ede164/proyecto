@@ -1,0 +1,150 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: century "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-image: url(https://i.pinimg.com/originals/80/7c/43/807c433a7b36c39956fac8ded66ac835.jpg);
+}
+body section {
+  display: flex;
+  flex-wrap: wrap;
+  color: goldenrod;
+  min-width: 300px;
+  align-items: center;
+}
+@media screen and (min-width: 500px) {
+  body section {
+    flex-wrap: nowrap;
+  }
+}
+body section in-flex {
+  flex: 1;
+  min-width: 250px;
+  font-size: x-large;
+  gap: 2vh;
+  padding: 5vh;
+}
+body section in-flex in-flex:first-child {
+  flex: 2;
+  padding: 25px;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 500px) {
+  body section in-flex in-flex:first-child {
+    flex-wrap: wrap;
+  }
+}
+body section in-flex in-flex:first-child in-flex div {
+  padding: 25px;
+  background-color: #fff;
+  margin: 20px;
+}
+@media screen and (min-width: 500px) {
+  body section in-flex in-flex:first-child in-flex div {
+    flex-wrap: wrap;
+  }
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+h1 span {
+  color: goldenrod;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 14ch;
+  -webkit-animation: typing 2s steps(14), blink 0.5s infinite step-end alternate;
+          animation: typing 2s steps(14), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 250px;
+}
+main .inicio {
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+div .carrusel {
+  min-width: 250px;
+  max-width: 800px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: gold;
+  width: 100%;
+}
+footer pie-pagina {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: gold;
+}
+footer pie-pagina grupo-1 {
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+footer pie-pagina grupo-1 grupo-2 {
+  flex-direction: column;
+}
+footer pie-pagina grupo-1 grupo-2 box {
+  flex-direction: column;
+}
+
+.home {
+  border: solid;
+  background-color: gold;
+  color: black;
+  -webkit-text-decoration: double;
+          text-decoration: double;
+}
+
+.proyectos, .auto__2, .auto__1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: solid 5px;
+  margin-bottom: 20px;
+  background-color: gold;
+  width: 80%;
+  margin: auto;
+}/*# sourceMappingURL=main.css.map */
