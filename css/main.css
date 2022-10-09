@@ -136,6 +136,10 @@ footer pie-pagina grupo-1 grupo-2 box {
           text-decoration: double;
 }
 
+.descripcion {
+  padding: 25px;
+}
+
 .proyectos, .auto__2, .auto__1 {
   display: flex;
   flex-wrap: wrap;
